@@ -1,3 +1,9 @@
-import message from "./message";
+import xyz from "./modules/message";
+import MyUser, { generateId } from "./modules/user";
 
-document.getElementById('message').innerHTML = message;
+const user = new MyUser('John', 'Smith', generateId());
+
+document.getElementById('users').innerHTML = user.toString();
+
+document.getElementById('message').innerHTML = xyz;
+
